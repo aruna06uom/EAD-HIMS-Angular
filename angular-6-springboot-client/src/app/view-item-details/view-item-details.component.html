@@ -1,0 +1,29 @@
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<div *ngIf="itemDetails" style="background-color: cornflowerblue">
+  <div>
+    <label>Name: </label> {{itemDetails.name}}
+  </div>
+  <div>
+      <label>Item Id: </label> {{itemDetails.itemId}}
+    </div>
+  <div>
+    <label>Category: </label> {{itemDetails.category}}
+  </div>
+  <div>
+      <label>Expire Date: </label> {{itemDetails.expireDate}}
+    </div>
+  <div>
+    <label>Branch: </label> {{itemDetails.branch}}
+  </div>
+  <div>
+      <label>Status: </label> {{itemDetails.status}}
+    </div>
+
+  <span class="button is-small btn-primary" *ngIf='itemDetails.live' (click)='updateActive(false)'>Inactive</span>
+
+  <span class="button is-small btn-primary" *ngIf='!itemDetails.expired' (click)='updateActive(true)'>Active</span>
+
+  <span class="button is-small btn-danger" (click)='deleteEmployee()'>Delete</span>
+
+  <hr/>
+</div>

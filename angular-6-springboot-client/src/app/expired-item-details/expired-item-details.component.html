@@ -1,0 +1,28 @@
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <div *ngIf="expiredItemDetails" style="background-color: cornflowerblue">
+    <div>
+        <label>Item Id: </label> {{expiredItemDetails.itemId}}
+      </div>
+    <div>
+      <label>Update Date: </label> {{expiredItemDetails.updateDate}}
+    </div>
+    <div>
+        <label>Update By: </label> {{expiredItemDetails.updateBy}}
+      </div>
+    <div>
+      <label>Category: </label> {{expiredItemDetails.category}}
+    </div>
+   <!--<div>
+        <label>Expired Date: </label> {{expiredItemDetails.expiredDate}}
+      </div>--> 
+  
+    <span class="button is-small btn-primary" *ngIf='expiredItemDetails.live' (click)='updateActive(false)'>Inactive</span>
+  
+    <span class="button is-small btn-primary" *ngIf='!expiredItemDetails.expired' (click)='updateActive(true)'>Active</span>
+  
+  
+    <hr/>
+  </div>
+  
+  

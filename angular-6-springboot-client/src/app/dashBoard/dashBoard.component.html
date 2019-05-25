@@ -1,0 +1,81 @@
+
+ <div >
+    <div style="text-align:right">
+      <button (click)="captureScreen();">PRINT PDF</button>
+    </div>
+  </div>
+ <table>
+      <tr>
+          <td  style="width:50%">
+  <div>
+      <h5>{{title1}} </h5>
+    <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>
+</td>
+<td style="width:50%">
+  <div style="display: block;" class="chart">
+      <h5>{{title2}} </h5>
+      <canvas baseChart
+            
+              [datasets]="labelMFL"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</td>
+      </tr>
+      <tr style="height:50px"></tr>
+      <tr>
+<td>
+    <div>
+        <div>
+          <div class="chart" style="align-content: center">
+              <h5 >{{title3}} </h5>
+            <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              [colors]="pieChartColors"
+              [legend]="pieChartLegend">
+            </canvas>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button mat-button mat-raised-button color="primary" (click)="pieChartLegend=!pieChartLegend">Toggle Legend</button>
+        <button mat-button mat-raised-button color="primary" (click)="changeLabels()">Change Labels</button>
+        <button mat-button mat-raised-button color="primary" (click)="addSlice()">Add Slice</button>
+        <button mat-button mat-raised-button color="primary" (click)="removeSlice()">Remove Slice</button>
+        <button mat-button mat-raised-button color="primary" (click)="changeLegendPosition()">Change Legend Position</button>
+      </div>
+</td>
+<td>
+    <div>
+        <div>
+          <div class="chart" style="align-content: center">
+              <h5>{{title4}} </h5>
+            <canvas baseChart
+              [data]="polarAreaChartData"
+              [labels]="polarAreaChartLabels"
+              [legend]="polarAreaLegend"
+              [chartType]="polarAreaChartType">
+            </canvas>
+          </div>
+        </div>
+      </div>
+</td>
+</tr>
+</table>

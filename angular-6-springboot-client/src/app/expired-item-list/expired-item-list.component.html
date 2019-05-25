@@ -1,0 +1,44 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<div class="container">
+    <div class="jumbotron">
+<h3>View Expired Item Details</h3>
+<hr>
+<div >
+    <div style="text-align:right">
+      <button (click)="captureScreen();">PRINT PDF</button>
+    </div>
+  </div> 
+<div class="panel panel-default">
+    <div class="panel-body pagination">
+      <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Item Id</th>
+            <th>Update Date</th>
+            <th>Update By</th>
+            <th>Category</th>
+           <!--<th>Expired Date</th> --> 
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let expiredItemDetails of expiredItemDetailsList | async">
+            <td>{{expiredItemDetails.itemId}}</td>
+            <td>{{expiredItemDetails.updateDate}}</td>
+            <td>{{expiredItemDetails.updateBy}}</td>
+            <td>{{expiredItemDetails.category}}</td>
+           <!--< <td>{{expiredItemDetails.expiredDate}}</td> -->
+            <td>expired</td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" (click)="deleteEmployee(itemDetails.itemId)">View  </button>
+              <button type="button" class="btn btn-danger btn-sm" (click)="deleteEmployee(expiredItemDetails.itemId)">Delete</button>
+              <button type="button" class="btn btn-info btn-sm" (click)="btnClick();">Edit</button> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  </div>

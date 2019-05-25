@@ -1,0 +1,86 @@
+<div class="container">
+
+  <h2 style='color:rgb(238, 234, 234);
+  background: linear-gradient(to right, rgb(156, 236, 251), rgb(101, 199, 247), rgb(0, 82, 212));margin-top: 10px;height: 50px;text-align: center;text-shadow: rgb(58, 127, 165)'>{{title}}</h2>
+  <!--<<img src="url(dist/assests/images/Hospital-Software.png)" alt="Italian Trulli"> -->
+  <!--<div [ngStyle]="{background: 'url(./assets/images/' + Hospital-Software.png + ')'}"></div>-->
+  <app-header>HMIS</app-header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!--  <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+     
+      <ul class="navbar-nav">
+          <li class="Home" class="btn btn-primary active" lass="nav-item"> 
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li class="nav-item">
+                      <a routerLink="home"   routerLinkActive="active">Home</a>
+                  </li>
+                  <li class="nav-item" >
+                      <a routerLink="register"  role="button" routerLinkActive="active">Register</a>
+                  </li>
+              </ul>
+            </li>
+       
+        <li class="nav-item" style="margin-left: 10px;">
+            <a routerLink="employeeList" class="btn btn-primary active" role="button" routerLinkActive="active">Employee List</a>
+        </li>
+        <li class="nav-item" style="margin-left: 10px;">
+          <a routerLink="newItem" class="btn btn-primary active" role="button" routerLinkActive="active">New Item</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+          <a routerLink="dashBoard" class="btn btn-primary active" role="button" routerLinkActive="active">DashBoard</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+        <a routerLink="viewItemDetails" class="btn btn-primary active" role="button" routerLinkActive="active">View Item Details</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+        <a routerLink="expiredItemDetails" class="btn btn-primary active" role="button" routerLinkActive="active">Expired Item Details</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+        <a routerLink="about" class="btn btn-primary active" role="button" routerLinkActive="active">About</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+        <a routerLink="contactUs" class="btn btn-primary active" role="button" routerLinkActive="active">Contact US</a>
+      </li>
+      </ul>
+    </nav> -->
+
+    <div class="navbar">
+        <li class="nav-item">
+            <a routerLink="dashBoard"   routerLinkActive="active">DashBoard</a>
+        </li>
+        <li class="nav-item" >
+            <a routerLink="register"  routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item" >
+            <a routerLink="employeeList" routerLinkActive="active">Employees</a>
+        </li>
+        <li class="nav-item" >
+          <a routerLink="newItem"  routerLinkActive="active">New Item</a>
+      </li>
+        <li class="nav-item" >
+            <a routerLink="viewItemDetails" routerLinkActive="active">View Items</a>
+          </li>
+          <li class="nav-item" >
+              <a routerLink="expiredItemDetails" routerLinkActive="active">Expired Items</a>
+            </li>
+            <li class="nav-item" >
+              <a routerLink="about" routerLinkActive="active">About</a>
+            </li>
+            <li class="nav-item" >
+              <a routerLink="contactUs" routerLinkActive="active">Contact US</a>
+            </li>
+        
+           
+          </div>
+        <!-- </div>  -->
+      <!-- </div> -->
+
+
+      
+  <router-outlet style="color:rgb(90, 6, 6);background-color: rgb(58, 127, 165);"></router-outlet>
+  
+</div>
+<app-footer></app-footer>
